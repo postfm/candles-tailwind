@@ -1,0 +1,1460 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  color: #000;
+  font-family: "Comfortaa", cursive;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.14;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.button {
+  padding: 18px 46px;
+  background-color: #ffbd59;
+  font-family: "Comfortaa", cursive;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header {
+  background-color: #fff8f3;
+}
+
+.container {
+  max-width: 1180px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+.menu__button {
+  display: none;
+  width: 30px;
+  height: 25px;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu__button span {
+  width: 100%;
+  height: 1px;
+  background-color: #7b6152;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.menu__list {
+  display: flex;
+  gap: 20px;
+}
+
+.menu__list-link {
+  text-transform: uppercase;
+}
+
+.phone {
+  position: relative;
+}
+
+.phone::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/phone.svg);
+  width: 20px;
+  height: 20px;
+  left: -23px;
+  top: -2px;
+}
+
+.main {
+  background-color: #fff8f3;
+  overflow-x: clip;
+}
+
+.title {
+  font-family: "Yeseva One", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.section {
+  padding-bottom: 150px;
+}
+
+.section--decor {
+  position: relative;
+  padding-bottom: 92px;
+}
+
+.section--decor::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url(../images/section-decor.png);
+  width: 22px;
+  height: 30px;
+}
+
+.section--decor::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  bottom: 13px;
+  background-color: #7b6152;
+  width: 1000%;
+  height: 1px;
+}
+
+.top {
+  min-height: 850px;
+  padding-top: 30px;
+  padding-bottom: 150px;
+}
+
+.top__inner {
+  position: relative;
+}
+
+.top__content {
+  width: 370px;
+  padding-top: 165px;
+}
+
+.top__title {
+  font-family: "Yeseva One", cursive;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.top__text {
+  margin-bottom: 48px;
+  font-size: 14px;
+}
+
+.top__buy {
+  padding: 18px 54px;
+  background-color: #ffbd59;
+  font-family: "Comfortaa", cursive;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.top__img {
+  position: absolute;
+  top: 0;
+  left: 240px;
+}
+
+.about {
+  background-color: #a5978e;
+  padding: 50px 0 48px;
+  color: #fafafa;
+  margin-bottom: 150px;
+}
+
+.about__inner {
+  display: flex;
+  align-items: center;
+}
+
+.about__content {
+  flex: none;
+  width: 370px;
+}
+
+.about__text {
+  margin-bottom: 15px;
+}
+
+.about__list {
+  display: flex;
+  align-items: center;
+  padding-left: 110px;
+  padding-bottom: 48px;
+  gap: 0 20px;
+}
+
+.about__item-img {
+  margin-bottom: 10px;
+}
+
+.about__item-text {
+  font-size: 11px;
+}
+
+.section__inner {
+  display: flex;
+}
+
+.section__descr {
+  flex: none;
+  width: 372px;
+}
+
+.section__content-descr {
+  flex: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.goods__content {
+  gap: 50px 90px;
+}
+
+.goods__item {
+  width: 290px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.goods__item-img {
+  margin-bottom: 8px;
+}
+
+.goods__item-price {
+  margin-bottom: 12px;
+  font-family: Yeseva One;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.goods__item-title {
+  margin-bottom: 16px;
+  font-family: Yeseva One;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.goods__item-text {
+  font-size: 12px;
+  margin-bottom: 27px;
+}
+
+.steps__list {
+  gap: 70px 25px;
+  counter-reset: number;
+}
+
+.steps__item {
+  position: relative;
+  display: flex;
+  gap: 0 40px;
+  list-style-type: none;
+}
+
+.steps__item::before {
+  counter-increment: number;
+  content: "0" counter(number);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: Yeseva One;
+  font-size: 30px;
+  color: #bea495;
+}
+
+.steps__item:nth-child(n + 10)::before {
+  content: counter(number);
+}
+
+.steps__item.steps__item--even::before {
+  left: auto;
+  right: 0;
+}
+
+.steps__item-text {
+  flex-basis: 174px;
+  padding-bottom: 40px;
+}
+
+.courses__item-img {
+  position: relative;
+  color: #ffffff;
+  font-size: 11px;
+  font-family: Yeseva One;
+  margin-bottom: 28px;
+}
+
+.courses__title {
+  padding: 15px 15px 15px 10px;
+  left: 3.5%;
+  top: 44%;
+}
+
+.courses__time {
+  padding: 7px 16px 7px 10px;
+  left: 3.5%;
+  top: 60%;
+}
+
+.courses__time span {
+  font-size: 10px;
+  font-family: Comfortaa;
+}
+
+.courses__price {
+  padding: 19px 19px 18px 10px;
+  bottom: -6px;
+  right: -8px;
+}
+
+.courses__title,
+.courses__time,
+.courses__price {
+  background-color: #bea495;
+  position: absolute;
+}
+
+.team {
+  background-color: #a5978e;
+  padding: 80px 0 60px;
+  color: #ffffff;
+  margin-bottom: 150px;
+}
+
+.team__content {
+  padding-bottom: 0;
+  gap: 75px;
+}
+
+.team__item {
+  position: relative;
+}
+
+.team__item-box {
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  width: 170px;
+  padding: 14px 8px 15px;
+  background-color: #7b6152;
+  text-align: center;
+  z-index: 4;
+}
+
+.team__item-name {
+  font-family: Yeseva One;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.team__item-descr {
+  font-size: 10px;
+}
+
+.feedback__descr {
+  margin-right: 20px;
+}
+
+.feedback__content {
+  padding-bottom: 110px;
+}
+
+.feedback__content .swiper-pagination {
+  bottom: 56px;
+}
+
+.swiper-pagination-bullet {
+  width: 53px;
+  height: 4px;
+  background-color: #bea495;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #7b6152;
+}
+
+.feedback__slider {
+  width: 760px;
+  overflow: hidden;
+}
+
+.feedback__item {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0 16px;
+  align-items: center;
+}
+
+.feedback__item-video {
+  position: relative;
+}
+
+.feedback__item-videobtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+.feedback__item-content {
+  padding-bottom: 70px;
+}
+
+.feedback__item-sociallink {
+  margin-bottom: 12px;
+}
+.feedback__item-name {
+  margin-bottom: 15px;
+  font-family: Yeseva One;
+  font-size: 16px;
+}
+.feedback__item-text {
+  margin-bottom: 15px;
+}
+
+.feedback__item-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+
+.certificates__slider {
+  width: 1135px;
+  overflow: hidden;
+}
+
+.certificates__descr {
+  margin-right: 20px;
+  padding-bottom: 114px;
+}
+
+.certificates__content .swiper-pagination {
+  bottom: 60px;
+  text-align: left;
+}
+
+.accordion__item {
+  background-color: #fafafa;
+  margin-bottom: 10px;
+}
+
+.accordion__title {
+  font-family: Yeseva One;
+  font-size: 16px;
+  display: block;
+  background-color: transparent;
+  padding: 16px 50px 16px 13px;
+  text-align: left;
+  position: relative;
+  width: 100%;
+}
+
+.accordion__title::after {
+  content: "";
+  background-image: url(../images/arrow.svg);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 26px;
+  top: 17px;
+}
+
+.accordion__title.accordion__title--active::after {
+  transform: rotate(180deg);
+}
+
+.accordion__text-inner {
+  padding: 20px 40px;
+}
+
+.accordion__text {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s, max-height 0.3s;
+}
+
+.accordion__text.accordion__text--visible {
+  opacity: 1;
+}
+
+.promo {
+  padding: 140px 0;
+  background-image: url(../images/promo-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.promo__inner {
+  display: flex;
+  align-items: center;
+}
+
+.promo__text {
+  padding-left: 56px;
+  max-width: 860px;
+  margin-right: 110px;
+  color: #fff;
+  font-family: Yeseva One;
+  font-size: 40px;
+}
+
+.promo__link {
+  color: #272727;
+  background-color: #ffbd59;
+  display: inline-block;
+  padding: 14px 25px 12px;
+}
+
+.contacts {
+  padding: 150px 0 50px;
+}
+
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form {
+  width: 664px;
+  padding: 75px 42px 67px;
+  background-color: #ffffff;
+}
+
+.form__title {
+  font-family: Yeseva One;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.form__input {
+  background-color: #ffffff;
+  border: none;
+  border-bottom: 1px solid #000000;
+  width: 100%;
+  display: block;
+  padding: 10px 7px;
+  margin-bottom: 15px;
+  font-family: Comfortaa;
+  color: #000000;
+}
+
+.form__input::placeholder {
+  color: #b3b3b3;
+  font-family: Comfortaa;
+  font-size: 14px;
+}
+
+.form__btn {
+  margin-top: 35px;
+  padding: 17px 34px;
+  color: #272727;
+  font-family: Comfortaa;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  background-color: #ffbd59;
+}
+.footer {
+  padding-top: 40px;
+  padding-bottom: 35px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  gap: 16px;
+}
+
+.footer__social {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .top {
+    min-height: 595px;
+  }
+  .top__content {
+    width: 333px;
+    padding-top: 93px;
+  }
+  .top__text {
+    margin-bottom: 30px;
+  }
+
+  .top__img {
+    left: 300px;
+  }
+
+  .top__img-l {
+    width: 655px;
+  }
+
+  .about__content {
+    width: 300px;
+  }
+
+  .about__list {
+    padding-left: 20px;
+  }
+
+  .section__descr {
+    width: 300px;
+  }
+
+  .section__text {
+    font-size: 10px;
+  }
+
+  .goods__content {
+    gap: 67px 67px;
+  }
+
+  .steps__item-img {
+    width: 130px;
+    height: 225px;
+    object-fit: cover;
+  }
+
+  .team {
+    padding: 50px 0;
+  }
+
+  .team__content {
+    gap: 30px 20px;
+  }
+
+  .team__title {
+    font-size: 30px;
+  }
+
+  .feedback__inner {
+    grid-template-columns: 260px auto;
+  }
+
+  .feedback__slider {
+    width: 660px;
+  }
+
+  .certificates__slider {
+    width: 840px;
+  }
+
+  .certificates__slider img {
+    width: 280px;
+  }
+
+  .promo__link {
+    min-width: 135px;
+    text-align: center;
+  }
+
+  .promo__text {
+    padding-left: 0;
+  }
+
+  .contacts__img {
+    width: 335px;
+  }
+
+  .form {
+    width: 592px;
+    padding: 75px 9px;
+  }
+
+  .form__btn {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer__inner {
+    flex-wrap: wrap;
+  }
+  .footer__contacts {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+  }
+  .footer__social {
+    justify-content: center;
+  }
+
+  .section__descr {
+    width: 200px;
+  }
+
+  .goods__content {
+    gap: 30px 16px;
+  }
+
+  .steps__list {
+    gap: 25px 35px;
+  }
+
+  .steps__item {
+    gap: 0 20px;
+  }
+
+  .steps__item-img {
+    width: 85px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .steps__item-text {
+    font-size: 8px;
+  }
+
+  .steps__item::before {
+    font-size: 20px;
+  }
+
+  .team__title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 830px) {
+  .course__item-img {
+    width: 195px;
+  }
+
+  .courses__item-img {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+
+  .courses__title {
+    padding: 10px 6px 10px 7px;
+    left: 16%;
+    top: 44%;
+  }
+
+  .courses__time {
+    padding: 6px 6px 6px 6px;
+    left: 16%;
+    top: 60%;
+  }
+
+  .courses__time span {
+    font-size: 10px;
+  }
+
+  .courses__price {
+    padding: 15px 15px 14px 10px;
+    bottom: 3px;
+    right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .container {
+    max-width: 640px;
+  }
+  .phone::before {
+    width: 14px;
+    height: 14px;
+    left: -16px;
+    top: -1px;
+    background-size: cover;
+  }
+  .top__content {
+    width: 230px;
+    padding-top: 100px;
+  }
+
+  .top__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .top__text {
+    margin-bottom: 20px;
+  }
+  .top__img {
+    left: 180px;
+  }
+
+  .about__content {
+    width: 200px;
+  }
+
+  .about__list {
+    margin-left: 27px;
+    margin-bottom: 33px;
+    padding-left: 21px;
+    gap: 0 9px;
+  }
+
+  .about__item-img {
+    margin-bottom: 5px;
+  }
+
+  .about__item-img--1 {
+    width: 120px;
+  }
+
+  .about__item-img--2 {
+    width: 190px;
+  }
+
+  .about__item-img--3 {
+    width: 120px;
+  }
+
+  .about__item-text {
+    font-size: 6px;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 11px 27px;
+  }
+  .goods__item {
+    width: 200px;
+  }
+
+  .goods__item-img {
+    width: 188px;
+    margin-bottom: 5px;
+  }
+
+  .goods__item-price {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .goods__item-title {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .goods__item-text {
+    font-size: 8px;
+    margin-bottom: 20px;
+  }
+
+  .courses__item-img {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+
+  .courses__title {
+    padding: 10px 6px 10px 7px;
+    left: 2%;
+    top: 44%;
+  }
+
+  .courses__time {
+    padding: 6px 6px 6px 6px;
+    left: 2%;
+    top: 60%;
+  }
+
+  .courses__time span {
+    font-size: 10px;
+  }
+
+  .courses__price {
+    padding: 15px 15px 14px 10px;
+    bottom: 0px;
+    right: -4px;
+  }
+
+  .team__content {
+    gap: 24px 14px;
+  }
+
+  .team__img {
+    width: 140px;
+  }
+
+  .team__item-box {
+    width: 112px;
+    padding: 10px 6px;
+    right: 0;
+  }
+
+  .team__item-name {
+    font-size: 8px;
+  }
+
+  .team__item-descr {
+    font-size: 6px;
+  }
+
+  .feedback__content {
+    padding-bottom: 94px;
+  }
+
+  .feedback__slider {
+    width: 430px;
+  }
+
+  .feedback__item-img {
+    width: 200px;
+  }
+
+  .feedback__item-videobtn img {
+    width: 50px;
+  }
+
+  .feedback__item-content {
+    padding-bottom: 40px;
+  }
+
+  .feedback__item-sociallink {
+    margin-bottom: 10px;
+  }
+
+  .feedback__item-sociallink img {
+    width: 15px;
+  }
+
+  .feedback__item-name {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .certificates__slider {
+    width: 600px;
+  }
+
+  .feedback__item-text {
+    font-size: 10px;
+  }
+
+  .feedback__item-btn {
+    font-size: 8px;
+  }
+
+  .certificates__slider img {
+    width: 200px;
+  }
+
+  .accordion__title {
+    font-size: 12px;
+  }
+
+  .accordion__text {
+    font-size: 10px;
+  }
+
+  .promo__text {
+    font-size: 15px;
+  }
+
+  .promo__link {
+    font-size: 12px;
+  }
+
+  .contacts__img {
+    width: 187px;
+  }
+
+  .form {
+    width: 440px;
+    padding: 30px 18px 30px 22px;
+  }
+
+  .form__title {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .form__btn {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .menu__button {
+    display: flex;
+  }
+  .header__menu-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-110%);
+    transition: transform 0.5s ease;
+    width: 153px;
+    padding: 25px 34px 25px 46px;
+    flex-direction: column;
+    gap: 20px 0;
+    background: #7b6152;
+    color: #fff8f3;
+  }
+  .header__menu-list.menu--open {
+    transform: translateY(0%);
+    z-index: 5;
+  }
+  .header__menu {
+    order: 1;
+  }
+
+  .section__inner {
+    flex-direction: column;
+  }
+
+  .section__descr {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .about {
+    margin-bottom: 50px;
+  }
+
+  .section {
+    padding-bottom: 50px;
+  }
+
+  .section__content-descr {
+    padding-bottom: 63px;
+  }
+
+  .team__item-box {
+    right: 90px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+  .footer__menu-list {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+  .footer__contacts {
+    padding-top: 0;
+  }
+  .footer {
+    padding: 50px 0;
+    font-size: 14px;
+  }
+  .team__item-box {
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .top {
+    padding-bottom: 50px;
+    min-height: 389px;
+  }
+
+  .top__img-l {
+    width: 309px;
+  }
+  .top__content {
+    width: 179px;
+    padding-top: 80px;
+  }
+
+  .top__title {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .top__text {
+    margin-bottom: 15px;
+    font-size: 8px;
+  }
+  .top__img {
+    left: 167px;
+  }
+  .top__buy {
+    padding: 13px 40px;
+    font-size: 10px;
+  }
+
+  .about__content {
+    width: 170px;
+  }
+
+  .about__list {
+    margin-left: 5px;
+    margin-bottom: 0;
+    padding-left: 11px;
+    padding-bottom: 63px;
+    gap: 5px;
+    align-items: end;
+  }
+
+  .about__item-text {
+    display: none;
+  }
+
+  .about__item-img--1 {
+    width: 80px;
+  }
+
+  .about__item-img--2 {
+    width: 140px;
+  }
+
+  .about__item-img--3 {
+    width: 80px;
+  }
+
+  .goods__title {
+    margin-bottom: 15px;
+  }
+
+  .steps__list {
+    gap: 25px 40px;
+  }
+
+  .team {
+    margin-bottom: 50px;
+  }
+
+  .team__item-box {
+    right: 10px;
+  }
+
+  .certificates__descr {
+    padding-bottom: 0;
+  }
+
+  .certificates__content .swiper-pagination {
+    text-align: center;
+  }
+
+  .certificates__slider {
+    width: 425px;
+    margin: 0 auto;
+  }
+
+  .promo {
+    padding: 42px 0;
+  }
+
+  .promo__text {
+    margin-right: 85px;
+  }
+
+  .contacts {
+    padding-top: 50px;
+  }
+
+  .contacts__img {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .courses__content {
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 404px) {
+  .steps__list {
+    gap: 20px 25px;
+  }
+
+  .steps__item {
+    gap: 0 16px;
+  }
+
+  .steps__item-img {
+    width: 66px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .steps__item-text {
+    font-size: 6px;
+  }
+
+  .steps__item::before {
+    font-size: 12px;
+  }
+  .team__content {
+    grid-template-columns: auto;
+  }
+
+  .team__img {
+    width: 205px;
+  }
+
+  .team__item-box {
+    width: 170px;
+    padding: 14px 8px;
+    left: 148px;
+  }
+
+  .team__item-name {
+    font-size: 12px;
+  }
+
+  .team__item-descr {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .top {
+    padding-bottom: 50px;
+    min-height: 262px;
+  }
+
+  .top__img-l {
+    width: 155px;
+  }
+  .top__content {
+    width: 203px;
+    padding-top: 30px;
+  }
+
+  .top__title {
+    font-size: 18px;
+  }
+
+  .top__text {
+    width: 198px;
+    font-size: 10px;
+  }
+  .top__img {
+    top: 40px;
+    left: 210px;
+  }
+
+  .about {
+    padding-top: 25px;
+    padding-bottom: 9px;
+  }
+
+  .about__content {
+    width: 233px;
+    align-self: flex-start;
+  }
+
+  .about__text {
+    font-size: 8px;
+    margin-bottom: 10px;
+  }
+
+  .about__list {
+    margin-left: 16px;
+    padding-top: 14px;
+    padding-bottom: 38px;
+  }
+
+  .about__item-img--2 {
+    display: none;
+  }
+
+  .about__item-img--3 {
+    display: none;
+  }
+
+  .section__descr {
+    width: 235px;
+    margin-bottom: 25px;
+  }
+
+  .goods__item {
+    width: 150px;
+  }
+
+  .goods__item-img {
+    width: 141px;
+  }
+
+  .goods__item-price {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .goods__item-title {
+    font-size: 10px;
+    margin-bottom: 7px;
+  }
+
+  .goods__item-text {
+    font-size: 6px;
+    margin-bottom: 16px;
+  }
+
+  .button {
+    font-size: 8px;
+    padding: 11px 22px;
+  }
+  .course__item-img {
+    width: 255px;
+  }
+
+  .courses__item {
+    width: 255px;
+  }
+
+  .courses__item-img {
+    font-size: 11px;
+    margin-bottom: 28px;
+  }
+
+  .courses__title {
+    padding: 15px 15px 15px 10px;
+    left: -0.5%;
+    top: 44%;
+  }
+
+  .courses__time {
+    padding: 7px 16px 7px 10px;
+    left: -0.5%;
+    top: 60%;
+  }
+
+  .courses__time span {
+    font-size: 10px;
+    font-family: Comfortaa;
+  }
+
+  .courses__price {
+    padding: 19px 19px 18px 10px;
+    bottom: -6px;
+    right: -8px;
+  }
+
+  .feedback__content {
+    padding-bottom: 84px;
+  }
+
+  .feedback__slider {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .feedback__item {
+    grid-template-columns: auto;
+    gap: 12px 0;
+  }
+
+  .feedback__item-video {
+    text-align: center;
+  }
+
+  .feedback__item-img {
+    width: 250px;
+  }
+  .feedback__item-content {
+    text-align: center;
+  }
+
+  feedback__content .swiper-pagination {
+    bottom: 50px;
+  }
+
+  .feedback__item-btn {
+    max-width: 136px;
+    margin: 0 auto;
+    left: 0;
+  }
+
+  .certificates__descr {
+    padding-bottom: 5px;
+  }
+
+  .certificates__slider {
+    width: 200px;
+  }
+
+  .section--decor {
+    padding-bottom: 70px;
+  }
+
+  .certificates__content .swiper-pagination {
+    bottom: 46px;
+  }
+
+  .accordion__title {
+    font-size: 10px;
+  }
+
+  .accordion__text {
+    font-size: 8px;
+  }
+
+  .promo__text {
+    margin-right: 50px;
+  }
+
+  .promo__link {
+    font-size: 8px;
+    min-width: 95px;
+  }
+
+  .form__btn {
+    font-size: 8px;
+    padding: 15px 13px;
+  }
+}
